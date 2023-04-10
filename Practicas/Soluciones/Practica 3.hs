@@ -42,3 +42,36 @@ algunoEs0p 0 y = True
 algunoEs0p x 0 = True
 algunoEs0p x y = False
  -- 2e
+ --sin pattern matching
+ambosSon0 :: Float -> Float -> Bool
+ambosSon0 x y | x == 0 && y == 0 = True
+              | otherwise = False
+
+ --con pattern matcing 
+ambosSon0p :: Float -> Float -> Bool
+ambosSon0p 0 0 = True
+ambosSon0p x y = False
+
+-- 2f
+mismoIntervalo :: Float -> Float -> Bool
+mismoIntervalo x y | x <= 3 && y <= 3 = True
+                   | (x > 3 && x <= 7) && (y > 3 && y <= 7) = True
+                   | x > 7 && y > 7 = True
+                   | otherwise = False
+-- 2g
+sumaDistintos :: Int -> Int -> Int -> Int
+sumaDistintos x y z | (x == y) && (x == z) = x
+                    | x == y = x + z
+                    | x == z = x + y
+                    | y == z = x + y
+                    | otherwise = x + y + z
+-- 2h
+esMultiploDe :: Int -> Int -> Bool
+esMultiploDe x y | mod x y == 0 = True
+                 | otherwise = False
+-- 2i
+digitoUnidades :: Int -> Int
+digitoUnidades x = mod x 10 
+--2j
+digitoDecenas :: Int -> Int
+digitoDecenas x = mod (div x 10) 10
