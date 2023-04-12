@@ -75,3 +75,51 @@ digitoUnidades x = mod x 10
 --2j
 digitoDecenas :: Int -> Int
 digitoDecenas x = mod (div x 10) 10
+-- Ejercicio 3 
+estanRelacionados :: Integer -> Integer -> Bool
+estanRelacionados a b | a == 0 && b == 0 = False
+                      | mod a b == 0 = True 
+                      | otherwise = False
+-- Ejercicio 4 
+-- 4a
+prodInt :: (Integer, Integer)-> (Integer, Integer) -> (Integer, Integer)
+prodInt (ax,ay) (bx, by) = (ax * bx , ay * by)
+
+-- 4b
+todoMenor ::(Float, Float)-> (Float, Float) -> Bool 
+todoMenor (ax,ay) (bx, by) | ax < bx && ay < by = True 
+                           | otherwise = False
+-- 4c
+distanciaPuntos :: (Float, Float)-> (Float, Float) -> Float
+distanciaPuntos (ax,ay) (bx, by) = sqrt(((bx - ax)**2)+((by - ay)**2))
+
+-- 4d
+sumaTerna :: (Integer, Integer, Integer) -> Integer
+sumaTerna (a, b, c) = a + b + c 
+
+-- 4e
+sumarSoloMultiplos :: (Integer, Integer, Integer) -> Integer -> Integer
+sumarSoloMultiplos (a,b,c) k | mod a k == 0 && mod b k == 0 && mod c k == 0 = a+b+c
+                             | mod a k == 0 && mod b k == 0 = a+b
+                             | mod a k == 0 &&  mod c k == 0 = a+c
+                             | mod b k == 0 && mod c k == 0 = b+c
+                             | mod a k == 0 = a
+                             | mod b k == 0 = b
+                             | mod c k == 0 = c
+                             | otherwise = 0
+--4f
+posPrimerPar :: (Integer, Integer, Integer) -> Integer
+posPrimerPar (a,b,c) | mod a 2 == 0 = 0
+                     | mod b 2 == 0 = 1
+                     | mod c 2 == 0 = 2
+                     | otherwise = 4
+
+-- 4g
+crearPar :: a ->b ->(a, b)
+crearPar a b = (a,b)
+
+-- 4h
+invertir :: (a, b) ->(b, a)
+invertir (a,b) = (b,a)
+
+-- Ejercicio 5 
