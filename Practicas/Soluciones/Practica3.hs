@@ -148,6 +148,4 @@ comparar :: Integer -> Integer -> Integer
 comparar a b | sumaUltimosDigitos a < sumaUltimosDigitos b = 1
              | sumaUltimosDigitos a > sumaUltimosDigitos b = -1
              | otherwise = 0
-
-sumaUltimosDigitos :: Integer -> Integer
-sumaUltimosDigitos x = mod x 10 + mod (div x 10) 10
+             where sumaUltimosDigitos x = mod x 10 + mod (div x 10) 10
