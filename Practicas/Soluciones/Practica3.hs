@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 dobleMe x = x + x
 -- Ejercicio 1 (hecho en clase)
 --1A
@@ -71,14 +72,14 @@ esMultiploDe x y | mod x y == 0 = True
                  | otherwise = False
 -- 2i
 digitoUnidades :: Int -> Int
-digitoUnidades x = mod x 10 
+digitoUnidades x = mod x 10
 --2j
 digitoDecenas :: Int -> Int
 digitoDecenas x = mod (div x 10) 10
 -- Ejercicio 3 
 estanRelacionados :: Integer -> Integer -> Bool
 estanRelacionados a b | a == 0 && b == 0 = False
-                      | mod a b == 0 = True 
+                      | mod a b == 0 = True
                       | otherwise = False
 -- Ejercicio 4 
 -- 4a
@@ -86,8 +87,8 @@ prodInt :: (Integer, Integer)-> (Integer, Integer) -> (Integer, Integer)
 prodInt (ax,ay) (bx, by) = (ax * bx , ay * by)
 
 -- 4b
-todoMenor ::(Float, Float)-> (Float, Float) -> Bool 
-todoMenor (ax,ay) (bx, by) | ax < bx && ay < by = True 
+todoMenor ::(Float, Float)-> (Float, Float) -> Bool
+todoMenor (ax,ay) (bx, by) | ax < bx && ay < by = True
                            | otherwise = False
 -- 4c
 distanciaPuntos :: (Float, Float)-> (Float, Float) -> Float
@@ -95,7 +96,7 @@ distanciaPuntos (ax,ay) (bx, by) = sqrt(((bx - ax)**2)+((by - ay)**2))
 
 -- 4d
 sumaTerna :: (Integer, Integer, Integer) -> Integer
-sumaTerna (a, b, c) = a + b + c 
+sumaTerna (a, b, c) = a + b + c
 
 -- 4e
 sumarSoloMultiplos :: (Integer, Integer, Integer) -> Integer -> Integer
@@ -123,3 +124,30 @@ invertir :: (a, b) ->(b, a)
 invertir (a,b) = (b,a)
 
 -- Ejercicio 5 
+todosMenores :: (Integer, Integer, Integer) -> Bool
+todosMenores (a,b,c) | f5 a > g5 a && f5 b > g5 b && f5 c > g5 c = True
+                     | otherwise = False
+-- funciones auxiliares
+f5 :: Integer -> Integer
+f5 x | x <= 7 = x^2
+     | otherwise = (2*x)-1
+
+g5 :: Integer -> Integer
+g5 n = if mod n 2 == 0 then div n 2 else 3*n + 1
+-- Ejercicio 6
+bisiesto :: Integer -> Bool
+bisiesto a | (mod a 4 /= 0) || (mod a 100 == 0 && mod a 400 /= 0) = False
+           | otherwise = True
+
+-- Ejercicio 7
+distanciaManhattan :: (Float,Float,Float) -> (Float,Float,Float) -> Float
+distanciaManhattan (a,b,c) (d,e,f) = abs((a-d) + (b - e) + (c-f))
+
+-- Ejercicio 8
+comparar :: Integer -> Integer -> Integer
+comparar a b | sumaUltimosDigitos a < sumaUltimosDigitos b = 1
+             | sumaUltimosDigitos a > sumaUltimosDigitos b = -1
+             | otherwise = 0
+
+sumaUltimosDigitos :: Integer -> Integer
+sumaUltimosDigitos x = mod x 10 + mod (div x 10) 10
