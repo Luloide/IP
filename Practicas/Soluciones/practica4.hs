@@ -63,7 +63,7 @@ f1 n = 2^n + f1 (n-1)
 
 -- 10 b 
 f2 :: Integer -> Integer -> Integer
-f2 n q | n == 0 = 0
+f2 n q | n == 1 = 1
        | otherwise = q^n + f2 (n-1) q
 
 -- 10 c 
