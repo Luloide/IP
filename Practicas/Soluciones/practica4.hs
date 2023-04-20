@@ -72,7 +72,7 @@ f3 n q = f2 (2 * n) q
 
 -- 10 d
 f4 :: Integer -> Integer -> Integer
-f4 n q = f2 (2*n) q - f2 (n-1) q
+f4 n q = f3 n q - f2 (n-1) q
 
 -- Ejercico 11c
 eAprox :: Integer -> Float
