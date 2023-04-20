@@ -1,3 +1,6 @@
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+import GHC.Natural (naturalFromInteger)
+import Distribution.PackageDescription (mkFlagAssignment)
 -- Ejercicio 1
 fibonacci :: Integer -> Integer
 fibonacci n | n == 0 = 0
@@ -27,7 +30,7 @@ sumaImpares n | n == 0 = 0
 medioFact :: Integer ->Integer
 medioFact n | n == 0  || n == (-1) = 1
             | otherwise = n * (medioFact (n-2))
-    
+
 --Ejercicio 6
 sumaDigitos :: Integer ->Integer
 sumaDigitos 0 = 0
@@ -72,13 +75,13 @@ f4 :: Integer -> Integer -> Integer
 f4 n q = f2 (2*n) q - f2 (n-1) q
 
 -- Ejercico 11c
-eAprox :: Integer -> Float 
+eAprox :: Integer -> Float
 eAprox x | x == 0 = 0
-         | otherwise = eAprox (x - 1) + (1 / factorial x) 
+         | otherwise = eAprox (x - 1) + (1 / factorial x)
 
-factorial :: Integer -> Float 
+factorial :: Integer -> Float
 factorial 0 = 1.0
-factorial n = fromIntegral n * factorial (n-1) 
+factorial n = fromIntegral n * factorial (n-1)
 
 -- Ejercicio 12
 raizDe2Aprox :: Integer -> Float
@@ -113,3 +116,49 @@ sumaRacionales n m | n == 0 = 0
 sumaInternaRacionales :: Integer -> Integer -> Float
 sumaInternaRacionales n m | m == 0 = 0
                           | otherwise = (fromIntegral n / fromIntegral m) + sumaInternaRacionales n (m-1)
+
+-- Ejercicio 16
+-- 16 a
+menorDivisor :: Integer ->Integer
+menorDivisor n = menorDivisorHasta n 2
+
+menorDivisorHasta :: Integer -> Integer -> Integer -- se requiere que q == 2
+menorDivisorHasta n q | mod n q == 0 = q
+                      | otherwise = menorDivisorHasta n (q+1)
+
+--16 b 
+esPrimo :: Integer ->Bool
+esPrimo n | menorDivisor n == n = True
+          | otherwise = False
+
+--16 c
+sonCoprimos :: Integer ->Integer ->Bool
+sonCoprimos a b | b == 1 = True -- caso base si a > b
+                | a == 1 = True -- caso base si b > a
+                | esPrimo a && esPrimo b = True
+                | (mod a b == 0) || (mod b a == 0 )= False
+                | a > b = sonCoprimos a (b-1)
+                | b > a = sonCoprimos (a-1) b
+ -- 16 d
+{-nEsimoPrimo :: Integer ->Integer
+nEsimoPrimo n -}
+
+-- esta funcion cuenta la cantidad de primos que hay hasta n 
+{-indexPrimo :: Integer -> Integer
+indexPrimo n | n == 0 = 0
+             | esPrimo n = 1 + indexPrimo (n-1)
+             | otherwise = indexPrimo (n-1)
+
+a terminar
+-}
+
+--Ejercico 17
+esFibonacci :: Integer -> Bool
+esFibonacci n = esFibonacciAux n 0
+
+esFibonacciAux :: Integer -> Integer -> Bool
+esFibonacciAux n i | n == fibonacci i = True
+                   | fibonacci i > n = False
+                   | otherwise = esFibonacciAux n (i+1)
+
+-- Ejercicio 18
