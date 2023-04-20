@@ -110,11 +110,11 @@ sumatoriaDeM q n m | m == 0 = 0
 
 --Ejercico 15
 sumaRacionales :: Integer -> Integer -> Float
-sumaRacionales n m | n == 0 = 0
+sumaRacionales n m | n == 1 = fromIntrgral m
                    | otherwise = sumaInternaRacionales n m + sumaInternaRacionales (n-1) m
 
 sumaInternaRacionales :: Integer -> Integer -> Float
-sumaInternaRacionales n m | m == 0 = 0
+sumaInternaRacionales n m | m == 1 = fromIntegral n
                           | otherwise = (fromIntegral n / fromIntegral m) + sumaInternaRacionales n (m-1)
 
 -- Ejercicio 16
