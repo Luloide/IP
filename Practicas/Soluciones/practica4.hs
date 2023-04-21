@@ -1,6 +1,7 @@
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 import GHC.Natural (naturalFromInteger)
 import Distribution.PackageDescription (mkFlagAssignment)
+import Language.Haskell.TH (SumAlt)
 -- Ejercicio 1
 fibonacci :: Integer -> Integer
 fibonacci n | n == 0 = 0
@@ -110,7 +111,7 @@ sumatoriaDeM q n m | m == 0 = 0
 
 --Ejercico 15
 sumaRacionales :: Integer -> Integer -> Float
-sumaRacionales n m | n == 1 = fromIntrgral m
+sumaRacionales n m | n == 0 =  0
                    | otherwise = sumaInternaRacionales n m + sumaInternaRacionales (n-1) m
 
 sumaInternaRacionales :: Integer -> Integer -> Float
@@ -140,17 +141,23 @@ sonCoprimos a b | b == 1 = True -- caso base si a > b
                 | a > b = sonCoprimos a (b-1)
                 | b > a = sonCoprimos (a-1) b
  -- 16 d
-{-nEsimoPrimo :: Integer ->Integer
-nEsimoPrimo n -}
+-- version 1
+nEsimoPrimo :: Integer -> Integer
+nEsimoPrimo n = nEsimoPrimoAux n 2 0
 
--- esta funcion cuenta la cantidad de primos que hay hasta n 
-{-indexPrimo :: Integer -> Integer
-indexPrimo n | n == 0 = 0
-             | esPrimo n = 1 + indexPrimo (n-1)
-             | otherwise = indexPrimo (n-1)
+nEsimoPrimoAux :: Integer -> Integer -> Integer -> Integer
+nEsimoPrimoAux n i k | n == k = i-1
+                     | esPrimo i = nEsimoPrimoAux n (i+1) (k+1)
+                     | otherwise = nEsimoPrimoAux n (i+1) k
+{- nEsimoPrimoAux toma 3 valores n que seria el n-esimo primo que buscamos , i el indice que atraviesa los Z y k que seria el contador de los primos que vamos encontrando -}
+-- version 2 (consultar)
+nEsimoPrimoV2 :: Integer -> Integer
+nEsimoPrimoV2 1 = 2
+nEsimoPrimoV2 n = proxPrimo (nEsimoPrimoV2 (n-1))
 
-a terminar
--}
+proxPrimo :: Integer -> Integer
+proxPrimo p | esPrimo p = p
+            | otherwise = proxPrimo (p+1)
 
 --Ejercico 17
 esFibonacci :: Integer -> Bool
@@ -162,3 +169,61 @@ esFibonacciAux n i | n == fibonacci i = True
                    | otherwise = esFibonacciAux n (i+1)
 
 -- Ejercicio 18
+mayorDigitoPar :: Integer ->Integer
+mayorDigitoPar n | n < 10 && par n = n
+                 | n < 10 = -1
+                 | par ultimoDigito = max ultimoDigito resultadoRecursion
+                 | otherwise = resultadoRecursion
+            where
+                  ultimoDigito = mod n 10
+                  par a = mod a 2 == 0
+                  resultadoRecursion = mayorDigitoPar (div n 10)
+
+-- Ejercicio 19 
+
+esSumaInicialDePrimos :: Integer ->Bool
+esSumaInicialDePrimos n = esSumaInicialDePrimosAux n 2
+
+esSumaInicialDePrimosAux :: Integer -> Integer -> Bool
+esSumaInicialDePrimosAux n q | n == sumaPrimosHasta 2 q = True
+                             | n < sumaPrimosHasta 2 q = False
+                             | otherwise = esSumaInicialDePrimosAux n (q+1)
+
+sumaPrimosHasta :: Integer -> Integer -> Integer
+sumaPrimosHasta m n  | esPrimo n && n == m = m
+                     | n == m = 0
+                     | esPrimo m = m + sumaPrimosHasta (m + 1) n
+                     | otherwise = sumaPrimosHasta (m+1) n
+
+-- Ejercicio 20 (NO LO TERMINE OJO!)
+tomaValorMax :: Integer -> Integer -> Integer
+tomaValorMax n1 n2 | sumaDivisores n2 == comparaValores n1 n2 = n2
+                   | otherwise = tomaValorMax n1 (n2 -1)
+
+comparaValores :: Integer -> Integer -> Integer -- se requiere que a=>1 y b=>a
+comparaValores a b | b == a = b
+                   | otherwise = max (sumaDivisores b) (sumaDivisores (comparaValores a (b-1))) 
+
+
+sumaDivisores :: Integer -> Integer
+sumaDivisores n = sumaDivisoresHasta n n
+
+sumaDivisoresHasta :: Integer -> Integer -> Integer 
+sumaDivisoresHasta n i | i == 0 = 0
+                       | mod n i == 0 = i + sumaDivisoresHasta n (i-1)
+                       | otherwise = sumaDivisoresHasta n (i-1)
+
+--Ejercico 21
+pitagoras :: Integer -> Integer -> Integer -> Integer
+pitagoras m n r | n == 0 = sumaTernas m 0 r
+                | otherwise = sumaTernas m n r + pitagoras m (n-1) r
+
+sumaTernas :: Integer -> Integer -> Integer -> Integer
+sumaTernas m n r | m == 0 && esTernaPitagorica m n r = 1
+                 | m == 0 = 0
+                 | esTernaPitagorica m n r = 1 + sumaTernas (m-1) n r
+                 | otherwise = sumaTernas (m-1) n r
+            where
+                  esTernaPitagorica a b c = a^2 + b^2 <= c^2
+
+
