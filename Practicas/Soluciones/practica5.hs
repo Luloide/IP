@@ -139,7 +139,26 @@ juntar (x:xs) (y:ys)
   | otherwise = y : juntar (x:xs) ys
 
 --Ejercicio 4 
+-- 4.1
+sacarBlancosRepetidos :: [Char] -> [Char]
+sacarBlancosRepetidos [] = []
+sacarBlancosRepetidos (x:xs) | x == ' ' && head xs == ' ' = sacarBlancosRepetidos xs
+                             | otherwise = x : sacarBlancosRepetidos xs
 
+--4.2
+contarPalabras :: [Char] -> Integer
+contarPalabras l = contarPalabrasSinBlancosRep (empiezaConUnBlanco (sacarBlancosRepetidos l))
+
+contarPalabrasSinBlancosRep :: [Char] -> Integer 
+contarPalabrasSinBlancosRep [] = 0
+contarPalabrasSinBlancosRep [x] = 1
+contarPalabrasSinBlancosRep (x:xs) | x == ' ' = 1 + contarPalabrasSinBlancosRep xs
+                                   | otherwise = contarPalabrasSinBlancosRep xs
+
+empiezaConUnBlanco :: [Char] -> [Char] -- Esta funcion ayuda para los casos en el cual la lista de char arranca con blacos
+empiezaConUnBlanco x | head x == ' ' = tail x
+                     | otherwise = x
+ -- 4.3
 -- Ejercicio 5
 -- 5.1
 nat2bin :: Integer -> [Integer]
