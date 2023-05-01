@@ -159,6 +159,53 @@ empiezaConUnBlanco :: [Char] -> [Char] -- Esta funcion ayuda para los casos en e
 empiezaConUnBlanco x | head x == ' ' = tail x
                      | otherwise = x
  -- 4.3
+palabraMasLarga :: [Char] -> [Char]
+palabraMasLarga x = comparoPalabras (palabras x) (head (palabras x))
+
+comparoPalabras :: [[Char]] -> [Char] -> [Char]
+comparoPalabras (x:xs) l | xs == [] = if longitudPalabra l > longitudPalabra x then l else x
+                         | longitudPalabra x > longitudPalabra l = comparoPalabras xs x
+                         | otherwise = comparoPalabras xs l
+
+longitudPalabra :: [Char] -> Int
+longitudPalabra [] = 0
+longitudPalabra (x:xs) | x == ' ' = 0
+                       | otherwise = 1 + longitudPalabra xs
+
+-- 4.4
+palabras :: [Char] -> [[Char]]
+palabras x = palabrasAux x x
+
+palabrasAux :: [Char] -> [Char] -> [[Char]]
+palabrasAux [] l = [palabra l]
+palabrasAux (x:xs) l | x == ' ' = palabra l : palabrasAux xs xs 
+                     | otherwise = palabrasAux xs l
+
+palabra :: [Char] ->  [Char]
+palabra [] = []
+palabra (x:xs) | x == ' ' = []
+                | otherwise = x : palabra xs
+
+-- 4.5
+aplanar :: [[Char]] -> [Char]
+aplanar [] = []
+aplanar (x:xs) = x ++ aplanar xs
+-- 4.6
+
+aplanarConBlancos :: [[Char]] -> [Char]
+aplanarConBlancos [] = []
+aplanarConBlancos (x:xs) | xs == [] = x
+                         | otherwise = x ++ [' '] ++ aplanar xs
+-- 4.7 
+aplanarConNBlancos :: [[Char]] -> Integer -> [Char]
+aplanarConNBlancos [] _ = []
+aplanarConNBlancos (x:xs) n | xs == [] = x
+                            | otherwise = x ++ generaNBlancos n ++ aplanarConNBlancos xs n 
+
+generaNBlancos :: Integer -> [Char]
+generaNBlancos 0 = []
+generaNBlancos n = ' ' : generaNBlancos (n-1)
+
 -- Ejercicio 5
 -- 5.1
 nat2bin :: Integer -> [Integer]
