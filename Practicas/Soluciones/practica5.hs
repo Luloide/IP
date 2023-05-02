@@ -289,3 +289,33 @@ esPrimo n | menorDivisor n == n = True
           | otherwise = False
 
 -- Ejercicio 6
+--6.1
+type Set a = [a]
+               
+agregarATodos :: Integer -> Set(Set Integer) -> Set(Set Integer)
+agregarATodos n m | m == [] = []
+                  | otherwise = agregar n (head m) : agregarATodos (n) (tail m)
+
+agregar :: Integer -> Set Integer -> Set Integer
+agregar n m | m == [] = [n]
+            | elem n m = m
+            | otherwise = n : m
+
+-- 6.2
+partes :: Integer -> Set(Set Integer)
+partes 0 = [[]]
+partes n = union (partes (n-1)) (agregarATodos n (partes (n-1)))
+
+union :: Set(Set Integer) -> Set(Set Integer) -> Set(Set Integer)
+union [] m = m
+union (n:nx) m | elem n m == True = union nx m
+               | otherwise = n : union nx m 
+
+--6.3
+productoCartesiano :: Set Integer -> Set Integer -> Set (Integer, Integer)
+productoCartesiano [] m = []
+productoCartesiano x m= producto (head x) m ++ productoCartesiano (tail x) m
+ 
+producto :: Integer -> Set Integer -> Set (Integer, Integer)
+producto n [] = []
+producto n (x:xs) = [(n , x)] ++ producto n xs
