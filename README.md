@@ -19,4 +19,4 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
     - [Soluciones](Practicas/Soluciones/practica4.hs)
   - Práctica 5
     - [Enunciado](https://github.com/Luloide/IP/blob/11b580362e9da9a4d3a430d69697bed7e8a1ca92/Practicas/Enunciados/Pr%C3%A1ctica%205%20-%20Recursi%C3%B3n%20sobre%20listas.pdf)
-    - [Soluciones](Practicas/Soluciones/practica5.hs) (no terminada todavía)
+    - [Soluciones](Practicas/Soluciones/practica5.hs)
