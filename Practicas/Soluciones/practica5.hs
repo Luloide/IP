@@ -1,3 +1,4 @@
+module Practica5 where
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 -- Ejercicio 1
 --1.1
@@ -97,6 +98,7 @@ maximoAux n (x:xs) | null xs && x > n = x
 
 -- 3.4
 sumarN :: Integer -> [Integer] -> [Integer]
+sumarN n [] = []
 sumarN n (x:xs) | null xs = [x+n]
                 | otherwise = (x+n) : sumarN n xs
 
@@ -117,7 +119,8 @@ pares (x:xs) | even x = x : pares xs
 -- 3.8
 multiplosDeN :: Integer -> [Integer] -> [Integer]
 multiplosDeN n [] = []
-multiplosDeN n (x:xs) | mod x n == 0 = x : multiplosDeN n xs
+multiplosDeN n (x:xs) | n == 0 =  multiplosDeN n xs
+                      | mod x n == 0 = x : multiplosDeN n xs
                       | otherwise = multiplosDeN n xs
 
 --3.9

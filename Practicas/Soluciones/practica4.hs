@@ -1,6 +1,6 @@
+module Practica4 where
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 import GHC.Natural (naturalFromInteger)
-import Distribution.PackageDescription (mkFlagAssignment)
 import Language.Haskell.TH (SumAlt)
 -- Ejercicio 1
 fibonacci :: Integer -> Integer
@@ -11,7 +11,8 @@ fibonacci n | n == 0 = 0
 
 --Ejercico 2 
 parteEntera :: Float -> Integer
-parteEntera n | 0 <= n && n < 1 = 0
+parteEntera n | n < 0 && n > (-1) = 0
+              | 0 <= n && n < 1 = 0
               | n > -1  && n < 0 = -1
               | n >=1 = 1 + parteEntera (n-1)
               | otherwise = (-1) + parteEntera (n+1)
