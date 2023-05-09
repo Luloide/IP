@@ -22,4 +22,4 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
     - [Soluciones](Practicas/Soluciones/practica5.hs)
   - Práctica 6
     - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/Practica%206%20-%20Testing%20de%20caja%20negra.pdf)
-    - [Soluciones] (Practicas/Soluciones/Practica6.hs)
+    - [Soluciones](Practicas/Soluciones/Practica6.hs)
