@@ -23,3 +23,6 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
   - Práctica 6
     - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/Practica%206%20-%20Testing%20de%20caja%20negra.pdf)
     - [Soluciones](Practicas/Soluciones/Practica6.hs)
+  - Práctica 7
+    - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/practica%207%20-%20Intro%20a%20Python.pdf)
+    - [Soluciones](Practicas/Soluciones/practica7.py)
