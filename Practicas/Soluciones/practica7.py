@@ -97,15 +97,99 @@ def devolver_el_valor_si_es_par_sino_el_que_sigue(n:int) -> int:
         return n 
     else:
         return n+1
+#5.4
+def devolver_el_doble_si_es_muliplo3_el_triple_si_es_multiplo9(n: int) -> int:
+    if n % 9 == 0:
+        return 3*n
+    elif n % 3 == 0:
+        return 2*n
+    else:
+        return n 
+#5.5
+def es_nombre_largo(nombre: str):
+    if len(nombre) >= 5:
+        print("Tu nombre tiene muchas letras!")
+    else:
+        print("Tu nombre tiene menos de 5 letras")
+
+# 5.6
+def vacaciones_o_laburo(e:int, s:str) -> str:
+    if e < 18 or (e >=60 and s == "F") or (e>=65 and s =="M"):
+        return "Andá de vacaciones"
+    else:
+        return "Te toca trabajar"
 
 #Ejercicio 6
+#6.1
+def num_del_1_al_10():
+    x = 1
+    while x != 11:
+        print(x)
+        x+=1
+
 #6.2
 def num_par_entre_20_y_40_while():
     x = 10
     while x <= 40:
         print(x)
         x += 2
-        
-def num_par_entre_20_y_40_for():
+
+#6.3
+def eco_eco():
+    x = 0
+    while x != 10:
+        print("eco")
+        x += 1
+
+#6.4
+def cuenta_regresiva(n: int):
+    while n !=0:
+        print(n)
+        n = n-1
+    print("Despegue")
+
+#6.5
+def viaje_en_el_tiempo(partida: int, llegada: int):
+    while partida != llegada:
+        partida = partida - 1
+        print("Viajó un year al pasado, estamos en el year:", partida)
+#6.6
+def viaje_en_el_tiempo_V2(partida:int, llegada:int):
+    #se requiere que el year de partida sea lo mas cercano a 384 a.c y que la llegada sea mas chico que 384 ac
+    while partida < llegada:
+        partida = partida + 20
+        print("Viajó 20 year al pasado, estamos en el year:", partida, "ac")
+
+#Ejercicio 7
+#7.1
+def num_del_1_al_10_for():
+    for i in range (1,11,1):
+        print(i)
+
+#7.2
+def num_par_entre_10_y_40_for():
     for i in range(10,41,2):
         print(i)
+#7.3
+def eco_eco_for():
+    for i in range(10):
+        print("eco")
+
+#7.4
+def cuenta_regresiva_for(n: int):
+    for i in range(n,0,-1):
+        print(i)
+    print("Despegue")
+
+#7.5
+def viaje_en_el_tiempo_for(partida: int, llegada: int):
+    for i in range(partida, llegada - 1 , -1):
+        print("Viajó un year al pasado, estamos en el year:", i)
+
+#7.6
+def viaje_en_el_tiempo_V2_for(partida:int, llegada:int):
+    #mismos requiere del otro ejercicio
+    for i in range(partida, llegada, 20):
+        print("Viajó 20 year al pasado, estamos en el year:", i, "ac")
+
+#Ejercicio 8
