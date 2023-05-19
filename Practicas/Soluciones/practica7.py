@@ -193,3 +193,37 @@ def viaje_en_el_tiempo_V2_for(partida:int, llegada:int):
         print("Viajó 20 year al pasado, estamos en el year:", i, "ac")
 
 #Ejercicio 8
+
+#Ejercicio 9
+#9.1 y 9.2
+""" 
+el resultado será 4, ya que esta funcion modifica la variable global g a medida que la vayamos llamando:
+asi: 
+ro(1) -> 2 (g vale 0)
+ro(1) -> 3 (g vale 1)
+ro(1) -> 4 (g vale 2)
+
+por otro lado, en el caso de la funcion rt, al evaluarla con rt(1,0) va a devolver 2 siempre, ya que la variable g es una variable local:
+asi:
+rt(1) -> 2 (g vale 0)
+rt(1) -> 2 (g vale 0)
+rt(1) -> 2 (g vale 0)
+"""
+#9.3
+def rt(x:int, g:int) -> int:
+    #estado a
+    g = g+1 # estado b, vale g = g@a + 1
+    return x + g # vale x@a + g@b
+
+g : int = 0 # estado a 
+def ro(x:int) -> int: # estado b 
+    global g
+    g = g + 1 # estado c,  vale g == g@a + 1
+    return x + g # vale x@b + g@c
+#9.4
+"""
+problema rt(in x: Z, in g: Z): Z{
+    requiere{True}
+    asegura{res = x + (g+1)}
+}
+"""
