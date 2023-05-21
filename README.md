@@ -26,3 +26,13 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
   - Práctica 7
     - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/practica%207%20-%20Intro%20a%20Python.pdf)
     - [Soluciones](Practicas/Soluciones/practica7.py)
+  - Práctica 8
+    - [Enunciado] falta guia completa
+    - [Soluciones](Practicas/Soluciones/practica8.py)
+## Entregas/Evaluaciones
+- [TP](/TP)
+- CMS1
+- CMS2
+- CMS3
+- Parcial
+ 
