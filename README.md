@@ -29,6 +29,12 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
   - Práctica 8
     - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/Practica%208%20-%20Funciones%20sobre%20listas.pdf)
     - [Soluciones](Practicas/Soluciones/practica8.py)
+  - Práctica 9
+    - Enunciado (no disponible todavía) 
+    - Soluciones (no disponible todavía)
+  - Práctica 10
+     - Enunciado (no disponible todavía) 
+     - Soluciones (no disponible todavía)
 ## Entregas/Evaluaciones
 - [TP](/TP)
 - CMS2
