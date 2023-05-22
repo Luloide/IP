@@ -27,7 +27,7 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
     - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/practica%207%20-%20Intro%20a%20Python.pdf)
     - [Soluciones](Practicas/Soluciones/practica7.py)
   - Práctica 8
-    - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/practica%207%20-%20Intro%20a%20Python.pdf)
+    - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/Practica%208%20-%20Funciones%20sobre%20listas.pdf)
     - [Soluciones](Practicas/Soluciones/practica8.py)
 ## Entregas/Evaluaciones
 - [TP](/TP)
