@@ -193,7 +193,14 @@ def viaje_en_el_tiempo_V2_for(partida:int, llegada:int):
         print("Viajó 20 year al pasado, estamos en el year:", i, "ac")
 
 #Ejercicio 8
+"""
+1) x@a == 5 ; y@a == 7
+2) x@a == 5 ; y@a == 7 ; z = x@a + y@a
+3) x@a == 5 : x@b == "hola"
+4) x@a == True ; y@a == False; res = x@a && y@a
+5) x@a == False ;  res = not(x@a)
 
+"""
 #Ejercicio 9
 #9.1 y 9.2
 """ 
@@ -225,5 +232,10 @@ def ro(x:int) -> int: # estado b
 problema rt(in x: Z, in g: Z): Z{
     requiere{True}
     asegura{res = x + (g+1)}
+}
+
+problema ro(in x: Z): Z{
+    requiere{True}
+    asegura{ res = x + (g@a + 1)}
 }
 """
