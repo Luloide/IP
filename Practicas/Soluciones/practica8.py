@@ -84,4 +84,83 @@ def tiene3VocalesDistintas(palabra: str) -> bool:
     else:
         return False
 
+#Ejercicio 2
+#2.1
+def ceroEnPosParInOut(l: list) -> list:
+    for i in range(len(l)):
+        if i % 2 == 0:
+            l[i] = 0
+    return l
+
+#2.2
+def ceroEnPosParIn(l:list)-> list:
+    listaNueva: list = []
+    for i in range(len(l)):
+        if i % 2 == 0:
+            listaNueva.append(0)
+        else:
+            listaNueva.append(i)
+    return listaNueva
+
+#2.3
+def sinVocales(text: str) -> str:
+    vocales: list[str] = ["a", "e", "i", "o", "u"]
+    nuevoText: str = ""
+    for letter in text:
+        if letter not in vocales:
+            nuevoText += letter
+    return nuevoText
+
+#2.4
+def remplazaVocales(text: str) -> str:
+    vocales: list[str] = ["a", "e", "i", "o", "u"]
+    nuevoText: str = ""
+    for letter in text:
+        if letter in vocales:
+            nuevoText += "_"
+        else:
+            nuevoText += letter
+    return nuevoText
+
+#2.5
+def daVueltaString(text: str) -> str:
+    textDadoVuelta : str = ""
+    for i in range(len(text)-1, -1, -1):
+        textDadoVuelta += text[i]
+    return textDadoVuelta
+
+#Ejercicio 3
+#3.1
+def listaEstudiantes(): #-> list[str]
+    stringDeNombres: str = input("lista de estudiantes hasta listo: ")
+    lista: list[str] = []
+    palabra = ""
+    for letra in stringDeNombres:
+        if letra != " ":
+            palabra += letra
+        else:
+            lista.append(palabra)
+            palabra = ""
+    lista.append(palabra) #agrega la ultima palabra al terminar el for
+    return lista[:lista.index("listo"):]
+
+#3.2
+def sube():#> int:
+    saldo = 0
+    historial: list = []
+    tipoDeOperacion = ""
+    while tipoDeOperacion != "X":
+        tipoDeOperacion = input("OPERACION A REALIZAR: ")
+        if tipoDeOperacion == "C":
+            monto = int(input("MONTO: "))
+            saldo += monto
+            historial.append((tipoDeOperacion, monto))
+        elif tipoDeOperacion == "D":
+            monto = int(input("MONTO: "))
+            saldo = saldo - monto
+            historial.append((tipoDeOperacion, monto))
+    return historial
+
+
+        
 
