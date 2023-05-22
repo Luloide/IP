@@ -13,19 +13,19 @@ def perteneceV2(l, e):
         return False
 # Si la implementaramos con tipos genéricos, puede buscar un caracter dentro de un string (funciona)
 #1.2
-def divideATodos(s: list, e:int) -> bool:
+def divideATodos(s: list[int], e:int) -> bool:
     for i in s:
         if i % e != 0:
             return False
     return True
 #1.3
-def sumaTotal(s: list) -> int:
+def sumaTotal(s: list[int]) -> int:
     suma = 0
     for i in s:
         suma += i
     return suma
 #1.4
-def ordenados(s: list) -> bool:
+def ordenados(s: list[int]) -> bool:
     elemanterior: int = s[0]
     s = s[1::]
     for i in s:
@@ -35,7 +35,7 @@ def ordenados(s: list) -> bool:
             elemanterior = i
     return True
 #1.5
-def palabraMayorA7(l: list) -> bool:
+def palabraMayorA7(l: list[str]) -> bool:
     for i in l:
         if len(i) > 7:
             return True
@@ -86,14 +86,14 @@ def tiene3VocalesDistintas(palabra: str) -> bool:
 
 #Ejercicio 2
 #2.1
-def ceroEnPosParInOut(l: list) -> list:
+def ceroEnPosParInOut(l: list[int]) -> list:
     for i in range(len(l)):
         if i % 2 == 0:
             l[i] = 0
     return l
 
 #2.2
-def ceroEnPosParIn(l:list)-> list:
+def ceroEnPosParIn(l:list[int])-> list:
     listaNueva: list = []
     for i in range(len(l)):
         if i % 2 == 0:
@@ -131,7 +131,7 @@ def daVueltaString(text: str) -> str:
 
 #Ejercicio 3
 #3.1
-def listaEstudiantes(): #-> list[str]
+def listaEstudiantes()-> list[str]:
     stringDeNombres: str = input("lista de estudiantes hasta listo: ")
     lista: list[str] = []
     palabra = ""
@@ -145,7 +145,7 @@ def listaEstudiantes(): #-> list[str]
     return lista[:lista.index("listo"):]
 
 #3.2
-def sube():#> int:
+def sube()-> int:
     saldo = 0
     historial: list = []
     tipoDeOperacion = ""
