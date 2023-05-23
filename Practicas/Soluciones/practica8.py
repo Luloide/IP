@@ -1,3 +1,4 @@
+import random
 # Ejercicio 1
 #1.1
 def pertenece(l :list, e: int) -> bool:
@@ -161,6 +162,74 @@ def sube()-> int:
             historial.append((tipoDeOperacion, monto))
     return historial
 
+#3.4
+def sieteYMedio() -> list[int]:
+    cartasPosibles = [1,2,3,4,5,6,7,10,11,12] # el 8 y el 9 no juegan, 10,11,12 valen medio punto
+    manoDelJugador = []
+    accionDelJugador = ""
 
-        
+    def sumaDeLaMano(l: list[int]) -> float: #funcion que suma las cartas del jugador
+        suma = 0
+        for i in l:
+            if i >= 10:
+                suma += 0.5
+            else:
+                suma += i
+        return suma
+    
+    def ganoONoElPlayer(): # cuando el jugador se planta, se fija si gano o no
+        suma = sumaDeLaMano(manoDelJugador)
+        if suma == 7.5:
+            print("Ganste sos god!")
+        else:
+            print("Perdiste :( , sumaste: ", suma)
+    
+    #arranca el juego
+    print("COMIENZA EL JUEGO!! \n")
+    #agarra la primera carta
+    manoDelJugador.append(random.choice(cartasPosibles))
+    #se fija las posibles acciones del jugador
+    while accionDelJugador != "plantarse":
+        if sumaDeLaMano(manoDelJugador) > 7.5: # se fija si el jugador suma mas de 7.5
+            print("Perdiste :(, te pasaste de 7.5")
+            return manoDelJugador
+        print("Tenes ", manoDelJugador, " en mano")
+        accionDelJugador = input("agarras una carta o te plantas?: (poner plantarse o agarrar otra)\n")
+        if accionDelJugador == "plantarse":
+            ganoONoElPlayer()
+            return manoDelJugador
+        else:
+            manoDelJugador.append(random.choice(cartasPosibles)) #agarra una carta
+#Ejercicio 4
+#4.1
+def perteneceACadaUno(l: list[list[int]], elem: int):
+    res: list[bool] = []
+    for sublista in l:
+        if pertenece(sublista, elem) == True:
+            res.append(True)
+        else:
+            res.append(False)
+    print(res)
+#4.2
+def esMatriz(s: list[list[int]]) -> bool:
+    #se fija que s no sea vacia:
+    if len(s) == 0:
+        return False
+    for columna in s:
+        longitudColumna = len(s[0])
+        if len(columna) == 0:
+            return False
+        elif len(columna) != longitudColumna:
+            return False
+    return True
+#4.3
+def filasOrdenadas(m: list[list[int]]):
+    res: list[bool] = []
+    for i in m:
+        if ordenados(i) == True:
+            res.append(True)
+        else:
+            res.append(False)
+    print(res)
 
+#4.4
