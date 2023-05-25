@@ -37,7 +37,22 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
      - Soluciones (no disponible todavía)
 ## Entregas/Evaluaciones
 - [TP](/TP)
-- CMS2
+- CMS2 (soluciones proximamente)
+  - Ejercicio 1
+    - Enunciado
+    - Solucion
+  - Ejercicio 2
+    - Enunciado
+    - Solucion 
+  - Ejercicio 3
+    - Enunciado
+    - Solucion 
+  - Ejercicio 4
+    - Enunciado
+    - Solucion 
+  - Ejercicio 5   
+    - Enunciado
+    - Solucion 
 - CMS3
 - Parcial
  
