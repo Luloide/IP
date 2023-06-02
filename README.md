@@ -37,22 +37,22 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
      - Soluciones (no disponible todavía)
 ## Entregas/Evaluaciones
 - [TP](/TP)
-- CMS2 (soluciones proximamente)
+- CMS2 
   - Ejercicio 1
-    - Enunciado
-    - Solucion
+    - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%201/Ej1-PiedraPapelTijera%20(es).pdf)
+    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%201/quienGana.py)
   - Ejercicio 2
-    - Enunciado
-    - Solucion 
+    - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%202/fibonacciNoRecusrivo.py)
+    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%202/fibonacciNoRecusrivo.py)
   - Ejercicio 3
-    - Enunciado
-    - Solucion 
+    - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%203/Ej3-MesetaMasLarga%20(es).pdf)
+    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%203/mesetaMasLarga.py)
   - Ejercicio 4
-    - Enunciado
-    - Solucion 
+    - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%204/Ej4-FilasParecidas%20(es).pdf)
+    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%204/filasParecidas.py)
   - Ejercicio 5   
-    - Enunciado
-    - Solucion 
+    - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%205/Ej5-SePuedeLlegar%20(es).pdf)
+    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%205/sePuedeLlegar.py)
 - CMS3
 - Parcial
  

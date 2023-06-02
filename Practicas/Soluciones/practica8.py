@@ -1,4 +1,5 @@
 import random
+import numpy as np
 # Ejercicio 1
 #1.1
 def pertenece(l :list, e: int) -> bool:
@@ -233,3 +234,31 @@ def filasOrdenadas(m: list[list[int]]):
     print(res)
 
 #4.4
+def potenciaMatriz(d: int, p: float):
+    m = np.random.random((d, d))**2 # se generaria una matriz random de tamanio d
+    nuevaMatriz = m
+    # si se eleva a 1 directamente imprime m
+    if p == 1:
+        print(m)
+    else:
+        incremento = 1
+        while incremento != p: 
+            #esta parte multiplica una m por la nueva matriz
+            matrizActualizada = []
+            nuevaFila = []
+            for fila in range(len(m)):
+                if nuevaFila != []:
+                    matrizActualizada.append(nuevaFila)
+                    nuevaFila = []
+                for columna in range(len(m[fila])):
+                    n = 0
+                    elem = 0
+                    while n!= d:
+                        elem += nuevaMatriz[fila][n] * m[n][columna]
+                        n += 1 
+                    nuevaFila.append(elem) #va creando la nueva fila de la matriz actualizada
+            #agrega la ultima fila a matriz actualizada
+            matrizActualizada.append(nuevaFila)
+            nuevaMatriz = matrizActualizada
+            incremento += 1
+    print(nuevaMatriz)
