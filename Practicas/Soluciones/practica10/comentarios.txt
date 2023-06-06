@@ -1,0 +1,3 @@
+#comentario
+    #comentario
+esto no es un comentario # esto tampoco
