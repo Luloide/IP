@@ -7,7 +7,7 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
 - Prácticas
   - Práctica 1
     - [Enunciado](https://github.com/Luloide/IP/blob/11b580362e9da9a4d3a430d69697bed7e8a1ca92/Practicas/Enunciados/Practica%201%20-%20Logica.pdf)
-    - Soluciones no disponibles todavía
+    - [Soluciones](https://github.com/Luloide/IP/blob/main/Practicas/Soluciones/Practica%201.pdf)
   - Práctica 2
     - [Enunciado](https://github.com/Luloide/IP/blob/11b580362e9da9a4d3a430d69697bed7e8a1ca92/Practicas/Enunciados/practica%202%20-especificacion.pdf)
     - Soluciones no disponibles todavía
