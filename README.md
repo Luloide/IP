@@ -10,7 +10,7 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
     - [Soluciones](https://github.com/Luloide/IP/blob/main/Practicas/Soluciones/Practica%201.pdf)
   - Práctica 2
     - [Enunciado](https://github.com/Luloide/IP/blob/11b580362e9da9a4d3a430d69697bed7e8a1ca92/Practicas/Enunciados/practica%202%20-especificacion.pdf)
-    - Soluciones no disponibles todavía
+    - [Soluciones](https://github.com/Luloide/IP/blob/main/Practicas/Soluciones/Practica2.pdf)
   - Práctica 3
     - [Enunciado](https://github.com/Luloide/IP/blob/11b580362e9da9a4d3a430d69697bed7e8a1ca92/Practicas/Enunciados/Practica%203%20-%20Introducci%C3%B3n%20a%20Haskell.pdf)
     - [Soluciones](Practicas/Soluciones/Practica3.hs)
