@@ -40,19 +40,31 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
 - CMS2 
   - Ejercicio 1
     - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%201/Ej1-PiedraPapelTijera%20(es).pdf)
-    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%201/quienGana.py)
+    - [Solución](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%201/quienGana.py)
   - Ejercicio 2
     - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%202/fibonacciNoRecusrivo.py)
-    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%202/fibonacciNoRecusrivo.py)
+    - [Solución](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%202/fibonacciNoRecusrivo.py)
   - Ejercicio 3
     - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%203/Ej3-MesetaMasLarga%20(es).pdf)
-    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%203/mesetaMasLarga.py)
+    - [Solución](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%203/mesetaMasLarga.py)
   - Ejercicio 4
     - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%204/Ej4-FilasParecidas%20(es).pdf)
-    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%204/filasParecidas.py)
+    - [Solución](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%204/filasParecidas.py)
   - Ejercicio 5   
     - [Enunciado](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%205/Ej5-SePuedeLlegar%20(es).pdf)
-    - [Solucion](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%205/sePuedeLlegar.py)
+    - [Solución](https://github.com/Luloide/IP/blob/private/CMS/Ejercicio%205/sePuedeLlegar.py)
 - CMS3
+  - Ejercicio 2
+    - [Enunciado](https://github.com/Luloide/IP/blob/main/CMS3/Ejercicio%202/Ej2-UnirDiccionarios%20(es).pdf)
+    - [Solución](https://github.com/Luloide/IP/blob/main/CMS3/Ejercicio%202/unir_diccionarios.py)
+  - Ejercicio 3
+    - [Enunciado](https://github.com/Luloide/IP/blob/main/CMS3/Ejercicio%203/Ej3-ProcesamientoPedidos%20(es).pdf)
+    - [Solución](https://github.com/Luloide/IP/blob/main/CMS3/Ejercicio%203/procesamiento_pedidos.py)
+  - Ejercicio 4
+    - [Enunciado](https://github.com/Luloide/IP/blob/main/CMS3/Ejercicio%204/Ej4-FilaDelBanco%20(es).pdf)
+    - [Solución](https://github.com/Luloide/IP/blob/main/CMS3/Ejercicio%204/Fila_Del_Banco.py)
 - Parcial
+  - [Ejercicios Pre Parcial](https://github.com/Luloide/IP/blob/main/Parcial/Ejercicios%20Repaso%20Parcial.pdf)
+  - [Enunciado](https://github.com/Luloide/IP/blob/main/Parcial/EnunciadoParicalIP.pdf)
+  - Resuelto 
  
