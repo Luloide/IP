@@ -66,5 +66,5 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
 - Parcial
   - [Ejercicios Pre Parcial](https://github.com/Luloide/IP/blob/main/Parcial/Ejercicios%20Repaso%20Parcial.pdf)
   - [Enunciado](https://github.com/Luloide/IP/blob/main/Parcial/EnunciadoParicalIP.pdf)
-  - Resuelto 
+  - [Resuelto](https://github.com/Luloide/IP/blob/main/Parcial/resolucion.pdf) 
  
