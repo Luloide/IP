@@ -1,9 +1,9 @@
 module Solucion where
 -- Nombre de Grupo: Overflow 'em all
--- Integrante 1: Lucia Silva, lucia.silva.alberto@gmail.com , 209/22
--- Integrante 2: Horacio Garcia Crespo, horaciogarciacr@gmail.com, 203/20
--- Integrante 3: Antonella Manzoni Bascoy, antonellapilar23@yahoo.com, 1603/21
--- Integrante 4: Ludmila Krasnozhon, ludkra2@gmail.com, 252/22
+-- Integrante 1: Lucia 
+-- Integrante 2: Horacio 
+-- Integrante 3: Antonella 
+-- Integrante 4: Ludmila
 type Usuario = (Integer, String) -- (id, nombre)
 type Relacion = (Usuario, Usuario) -- usuarios que se relacionan
 type Publicacion = (Usuario, String, [Usuario]) -- (usuario que publica, texto publicacion, likes)
