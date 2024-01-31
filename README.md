@@ -31,7 +31,7 @@ Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un
     - [Soluciones](Practicas/Soluciones/practica8.py)
   - Práctica 9
     - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/Practica%209%20-%20Testing%20de%20caja%20blanca.pdf)
-    - Soluciones (no disponible todavía)
+    - Soluciones
   - Práctica 10
      - [Enunciado](https://github.com/Luloide/IP/blob/main/Practicas/Enunciados/Practica%2010%20-%20Archivos%2C%20Pilas%2C%20Colas%20y%20Diccionarios.pdf)
      - [Soluciones](Practicas/Soluciones/practica10/practica10.py)
