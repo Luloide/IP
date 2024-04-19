@@ -1,7 +1,3 @@
-module Practica4 where
-{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
-import GHC.Natural (naturalFromInteger)
-import Language.Haskell.TH (SumAlt)
 -- Ejercicio 1
 fibonacci :: Integer -> Integer
 fibonacci n | n == 0 = 0
