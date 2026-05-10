@@ -2,7 +2,7 @@
 Repo de la materia Introdución a la programación (Algoritmos y Estructuras de Datos I), 1er cuatrimestre 2023.
 Sí encontrás algún error o si tenés alguna duda sobre la repo podes abrir un issue [acá](https://github.com/Luloide/IP/issues).
 ## Contenidos
-- Apuntes de las teoricas qué hice en notion [acá](https://yielding-eyeliner-2a6.notion.site/9bd81790733c47bdb6162a3989ffc236?v=7504303d05bb4b86910f032f33b540c4).
+- Apuntes de las teoricas qué hice en notion [acá](https://luloide.notion.site/eaf9cb7d02f74e44a9abfab36d02cad4?v=2e6b24d6187248db841ed0cb4f7d2097&p=e74377f32a3f4397a6c9fae447175148&pm=s)).
 - [Slides](Teoricas/Slides) de las Teoricas.
 - Prácticas
   - Práctica 1
